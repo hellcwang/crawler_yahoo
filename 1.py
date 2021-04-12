@@ -139,13 +139,13 @@ for i in range(0,len(l)):
             tmp = t.find('img')
             try:
                 print("image url" , tmp['data-src'])
-                im = tmp[data-src]
+                im = tmp['data-src']
                 dic = {'title':title, 'url':url, 'img_src':im, 'content':content}   #write in the dic
                 total.append(dic)   #add dic to list
             except:
                 try:
                     print("image url" , tmp['src'])
-                    im = tmp[src]
+                    im = tmp['src']
                     dic = {'title':title, 'url':url, 'img_src':im, 'content':content}
                     total.append(dic)
                 except:         #can't find neither src nor data-src
